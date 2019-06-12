@@ -5,7 +5,8 @@ const database = 'rest-api-workshop'
 const user = 'theoutlander'
 const password = 'fZsMGZXQMx8FCTgkBwgFtEvwD7ML'
 
-mongoose.connect(`mongodb://${user}:${password}@${server}/${database}`)
+mongoose.connect(`mongodb://${user}:${passwd}@${server}:${port}/${db}`, {'useNewUrlParser': true})
+mongoose.set('useCreateIndex', true);
 
 let CustomerSchema = new mongoose.Schema({
   name: String,
